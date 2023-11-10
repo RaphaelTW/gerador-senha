@@ -1,17 +1,36 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import Slider from '@react-native-community/slider'
 
 export default function App(){
   return(
     <View style={styles.container}>
       <Image
       source={require("./src/assets/logo.png")}
-      style={style.logo}
+      style={styles.logo}
       />
+
+      <Text style={styles.title}>20 Caracteres</Text>
+
+      <View style={styles.area}>
+        <Slider
+        style={{ height: 50}}
+        minimumValue={6}
+        maximumValue={20}
+        minimumTrackTintColor="#03C74E"
+        maximumTrackTintColor="#FF0000"
+        thumbTintColor="#00FF62"
+        />
+      </View>
+
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}> Gerar Senha</Text>
+      </TouchableOpacity>
+
     </View>
   )
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   container:{
     flex:1,
     backgroundColor: "#F3F3F3",
@@ -19,7 +38,32 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   logo:{
-    marginBottom: 60
+    marginBottom: 60,
+  },
+  area:{
+    marginTop: 14,
+    marginBottom: 14,
+    width: "80%",
+    backgroundColor: "#FFF",
+    borderRadius: 10,
+    padding: 6,
+  },
+  button:{
+    backgroundColor: "#00FF62",
+    width: "80%",
+    height: 50,
+    alignItems: "center",
+    justifyContent: 'center',
+    borderRadius: 10,
+    marginBottom: 18,
+  },
+  buttonText:{
+    color: "#006B12",
+    fontSize: 20,
+  },
+  title:{
+    fontSize: 30,
+    fontWeight: 'bold',
   }
 })
 
