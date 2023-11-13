@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native'
 
 export function Passwords(){
     return(
@@ -10,4 +10,4 @@ export function Passwords(){
 
 const styles = StyleSheet.create({
 
-});
+})

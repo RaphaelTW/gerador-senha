@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet, TouchableOpacity, Pressable } from "react-native";
-import * as Clipboard from 'expo-clipboard';
+import { View, Text, StyleSheet, TouchableOpacity, Pressable } from "react-native"
+import * as Clipboard from 'expo-clipboard'
 
 export function ModalPassword({ password, handleClose }){
 
@@ -9,7 +9,6 @@ export function ModalPassword({ password, handleClose }){
 
         handleClose();
     }
-
 
     return(
         <View style={styles.container}>
