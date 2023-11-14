@@ -36,7 +36,7 @@ export function Home(){
         minimumValue={6}
         maximumValue={20}
         minimumTrackTintColor="#03C74E"
-        maximumTrackTintColor="#FF0000"
+        maximumTrackTintColor="#D30000"
         thumbTintColor="#00FF62"
         value={size}
         onValueChange={ (value) => setSize(value.toFixed(0)) }
